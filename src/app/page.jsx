@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import AboutSection3D from "@/components/AboutSection3D";
 import LocationSection from "@/components/LocationSection";
+import CommunityForum from "@/components/CommunityForum";
 
 export default function Home() {
   const images = [
@@ -159,65 +160,14 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* Latest Blog */}
-      <section className="py-24 bg-base-100">
-        <div className="max-w-7xl mx-auto px-6">
-            <div className="flex justify-between items-center mb-12">
-            <div>
-                <p className="uppercase text-error font-semibold tracking-widest">
-                Blog
-                </p>
-
-                <h2 className="text-5xl font-black uppercase mt-2">
-                Stay In The Loop
-                </h2>
-            </div>
-
-            <Link href="/blog" className="btn btn-error">
-                More Posts
-            </Link>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
-                <div
-                key={item}
-                className="card bg-base-200 shadow-xl hover:shadow-2xl transition"
-                >
-                <figure>
-                    <img
-                    src={`https://picsum.photos/600/400?random=${item}`}
-                    alt="blog"
-                    className="h-64 w-full object-cover"
-                    />
-                </figure>
-
-                <div className="card-body">
-                    <p className="text-error text-xs uppercase">
-                    October 17, 2024
-                    </p>
-
-                    <h3 className="font-black text-2xl uppercase">
-                    Fitness Motivation Tips
-                    </h3>
-
-                    <button className="btn btn-error btn-sm w-fit mt-4">
-                    Read More
-                    </button>
-                </div>
-                </div>
-            ))}
-            </div>
-        </div>
-      </section>
+      {/* Community Forum */}
+      <CommunityForum />
 
       {/* About Section */}
       <AboutSection3D />
 
       {/* Location / Branch Section */}
       <LocationSection />
-
 
       {/* Big Membership Banner   */}
       <section className="bg-error py-8 overflow-hidden">
